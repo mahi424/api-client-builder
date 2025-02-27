@@ -4,3 +4,5 @@ generated-clients/
 node_modules/
 output/
 src/__fixtures__
+.env
+*.yaml

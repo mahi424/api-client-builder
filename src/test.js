@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const generateApiClient = require('./index');
+const generateApiClient = require('./client-generator');
 
 // Create test directories if they don't exist
 const inputDir = path.join(__dirname, '..', 'input/samples');
@@ -24,12 +24,16 @@ async function testApiClientGenerator() {
         // const samples = fs.readdirSync(inputDir);
         const samples = [ 
             // 'postman-collection.json', 
-            // 'swagger.json' ,
-            'curl.txt'
+            'swagger.json' ,
+            // 'curl.txt'
         ]
         console.log('samples', samples)
         // Define supported languages
-        const languages = ['python', 'typescript', 'java', 'go'];
+        const languages = [
+            // 'python', 
+            'typescript', 
+            // 'java', 'go'
+        ];
         
         // Test each sample with each language
         for (const sample of samples) {

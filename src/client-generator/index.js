@@ -1,7 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const { execSync } = require('child_process');
-const convertToOpenAPI = require('./open-api-converter');
+const convertToOpenAPI = require('../open-api-converter');
+const enrichOpenApiSpec = require('../spec-enricher');
 
 /**
  * Generates an API client from various input sources
@@ -18,9 +19,12 @@ async function generateApiClient(options) {
     try {
         // Convert to OpenAPI spec
         const openApiSpec = await convertToOpenAPI(input, inputType);
-        
+        console.log('openApiSpec', openApiSpec)
+        // Enhance the spec using AI
+        const enrichedSpec = await enrichOpenApiSpec(openApiSpec);
+        console.log('enrichedSpec', enrichedSpec)
         // Save to temporary file
-        fs.writeFileSync(tempSpecPath, openApiSpec);
+        fs.writeFileSync(tempSpecPath, enrichedSpec);
         
         // Determine generator type based on language
         const generatorMap = {
