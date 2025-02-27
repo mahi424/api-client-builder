@@ -1,0 +1,6 @@
+input/
+generated-clients/
+!generated-clients/.gitkeep
+node_modules/
+output/
+src/__fixtures__
