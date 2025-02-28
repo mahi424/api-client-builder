@@ -7,6 +7,9 @@
     "generate": "node src/index.js",
     "interactive": "node src/interactive-cli.js"
   },
+  "bin": {
+    "api-client-builder": "src/cli/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
