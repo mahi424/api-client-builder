@@ -5,13 +5,24 @@
   "scripts": {
     "test": "node src/test.js",
     "generate": "node src/index.js",
-    "interactive": "node src/interactive-cli.js"
+    "interactive": "node src/interactive-cli.js",
+    "prepublishOnly": "npm test"
   },
   "bin": {
     "api-client-builder": "src/cli/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahi424/api-client-builder.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "mahi424",
+    "email": "mahi424@users.noreply.github.com"
+  },
   "license": "ISC",
   "description": "",
   "dependencies": {

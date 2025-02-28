@@ -27,7 +27,7 @@ A versatile tool to generate API clients from various API specification formats.
 
 ```bash
 # Clone the repository
-git clone https://github.com/mahi424/api-client-generator.git
+git clone https://github.com/mahi424/api-client-builder.git
 
 # Install dependencies
 cd api-client-builder
@@ -129,4 +129,4 @@ api-client-builder/
 
 ## License
 
-ISC License
+GPL v3
